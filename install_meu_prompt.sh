@@ -1,3 +1,5 @@
 # Chame esse script antes de todos.
 cp meu_prompt.sh $HOME/.
-echo "source $HOME/meu_prompt.sh" >> $HOME/.bashrc
+if [ $(cat $HOME/.bashrc | grep -v ^\# | grep meu_prompt | wc -l) -eq 0 ]; then
+   echo 'source $HOME/meu_prompt.sh "yes"' >> $HOME/.bashrc
+fi
