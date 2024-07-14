@@ -1,5 +1,5 @@
 # Aplicativos mais básicos
-sudo apt install -y git curl wget htop btop vim terminator gnuplot octave net-tools binutils make cmake gcc g++ zip unzip gzip libreoffice
+sudo apt install -y mc git curl wget htop btop vim terminator gnuplot octave net-tools binutils make cmake gcc g++ zip unzip gzip libreoffice
 
 
 # IDEs da JetBrains
@@ -44,3 +44,45 @@ tar -xvf ~/pycharm-professional-2024.1.4.tar
 ln -s ~/.local/share/pycharm-2024.1.4 ~/.local/share/pycharm
 echo 'export PATH=$PATH:/home/spedison/.local/share/pycharm/bin' >> ~/.bashrc
 rm ~/pycharm-professional-2024.1.4.tar
+
+
+#Anaconda
+cd ~
+export INSTALLER_VERSION="2024.06-1"
+# Pacotes necessários
+# Original 
+# sudo apt install -y libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
+# Ajustado
+sudo apt install -y libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 liboss4-salsa-asound2 libxi6 libxtst
+
+#        https://repo.anaconda.com/archive/Anaconda3-2024.06-1-Linux-x86_64.sh
+curl -O https://repo.anaconda.com/archive/Anaconda3-$INSTALLER_VERSION-Linux-x86_64.sh
+
+# Não tem uma instalação decente.
+# Deve aceiter os termos e pedir para alterar o .bashrc
+bash "$HOME/Anaconda3-$INSTALLER_VERSION-Linux-x86_64.sh"
+
+#SDKMan
+curl -s "https://get.sdkman.io" | bash
+
+source ~/.bashrc
+sdk install java 21.0.2-graalce
+## Responder No para as questões abaixo... Por falta da automação na linha de comando
+sdk install java 17.0.9-graalce
+sdk install java 21.0.2-open
+# Esse era um teste por conta das mensagens. Melhorar da próxima vez.
+# while true; do echo no; sleep 0.1s; done  | sdk install java 21.0.2-open
+sdk install java 8.0.412-amzn
+echo "" >> $HOME/.bashrc
+echo "## Caminhos para o Java" >> $HOME/.bashrc
+echo 'export JAVA_HOME=$HOME/.sdkman/candidates/java/current' >> $HOME/.bashrc
+echo 'export PATH=$PATH:$JAVA_HOME/bin' >> $HOME/.bashrc
+
+
+
+
+
+
+
+
+
