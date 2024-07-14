@@ -1,9 +1,17 @@
 [com/ubuntu/update-notifier]
 release-check-time=uint32 1720924387
 
+[desktop/ibus/general]
+preload-engines=['xkb:us:intl:eng']
+version='1.5.29'
+
 [org/gnome/control-center]
-last-panel='background'
+last-panel='keyboard'
 window-state=(1080, 1201, false)
+
+[org/gnome/deja-dup]
+backend='google'
+prompt-check='2024-07-14T19:55:14.878311Z'
 
 [org/gnome/desktop/a11y/applications]
 screen-magnifier-enabled=false
@@ -30,10 +38,10 @@ translate=true
 [org/gnome/desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/contest/noble.xml'
-picture-uri-dark='file:///usr/share/backgrounds/contest/noble.xml'
-primary-color='#000000000000'
-secondary-color='#000000000000'
+picture-uri='file:///usr/share/backgrounds/Monument_valley_by_orbitelambda.jpg'
+picture-uri-dark='file:///usr/share/backgrounds/Monument_valley_by_orbitelambda.jpg'
+primary-color='#000000'
+secondary-color='#000000'
 
 [org/gnome/desktop/input-sources]
 sources=[('xkb', 'us+intl')]
@@ -46,12 +54,15 @@ icon-theme='Yaru'
 text-scaling-factor=1.29
 toolkit-accessibility=false
 
+[org/gnome/desktop/peripherals/keyboard]
+numlock-state=true
+
 [org/gnome/desktop/screensaver]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/contest/noble.xml'
-primary-color='#000000000000'
-secondary-color='#000000000000'
+picture-uri='file:///usr/share/backgrounds/Monument_valley_by_orbitelambda.jpg'
+primary-color='#000000'
+secondary-color='#000000'
 
 [org/gnome/desktop/session]
 idle-delay=uint32 0
@@ -59,6 +70,7 @@ idle-delay=uint32 0
 [org/gnome/desktop/wm/preferences]
 auto-raise=true
 focus-mode='mouse'
+num-workspaces=7
 resize-with-right-button=false
 
 [org/gnome/evolution-data-server]
@@ -66,32 +78,77 @@ migrated=true
 
 [org/gnome/mutter]
 center-new-windows=true
-edge-tiling=false
+dynamic-workspaces=false
 workspaces-only-on-primary=false
 
-[org/gnome/mutter/keybindings]
-toggle-tiled-left=@as []
-toggle-tiled-right=@as []
-
 [org/gnome/nautilus/preferences]
+default-folder-viewer='icon-view'
 migrated-gtk-settings=true
+search-filter-time-type='last_modified'
+
+[org/gnome/portal/filechooser/snap.firefox]
+last-folder-path='/tmp/xx'
+
+[org/gnome/settings-daemon/plugins/media-keys]
+control-center=['<Super>c']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
+home=['<Super>f']
+terminal=['<Super>t']
+www=['<Super>w']
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Super>j'
+command='/home/spedison/.local/share/intellij/bin/intellij.sh'
+name='Java'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
+binding='<Super>g'
+command='/home/spedison/.local/share/goland/bin/goland.sh'
+name='GoLand'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2]
+binding='<Super>y'
+command='/home/spedison/.local/share/pycharm/bin/pycharm.sh'
+name='Python'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3]
+binding='<Shift><Super>equal'
+command='/home/spedison/.local/share/clion/bin/clion.sh'
+name='CLion'
 
 [org/gnome/settings-daemon/plugins/power]
 sleep-inactive-ac-timeout=3600
 sleep-inactive-ac-type='nothing'
 
 [org/gnome/shell]
+disabled-extensions=['tiling-assistant@ubuntu.com']
+enabled-extensions=['ding@rastersoft.com', 'ubuntu-dock@ubuntu.com']
+favorite-apps=['firefox_firefox.desktop', 'thunderbird_thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Rhythmbox3.desktop', 'libreoffice-writer.desktop', 'snap-store_snap-store.desktop', 'yelp.desktop', 'jetbrains-idea.desktop', 'jetbrains-goland.desktop', 'jetbrains-clion.desktop', 'jetbrains-pycharm.desktop', 'google-chrome.desktop']
+last-selected-power-profile='performance'
 welcome-dialog-last-shown-version='46.0'
+
+[org/gnome/shell/extensions/dash-to-dock]
+dock-fixed=false
+dock-position='BOTTOM'
+extend-height=false
+multi-monitor=true
 
 [org/gnome/shell/extensions/tiling-assistant]
 active-window-hint-color='rgb(211,70,21)'
 last-version-installed=46
-overridden-settings={'org.gnome.mutter.edge-tiling': <@mb nothing>, 'org.gnome.mutter.keybindings.toggle-tiled-left': <@mb nothing>, 'org.gnome.mutter.keybindings.toggle-tiled-right': <@mb nothing>}
 tiling-popup-all-workspace=true
 
 [org/gnome/shell/world-clocks]
 locations=@av []
 
 [org/gtk/gtk4/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
 show-hidden=false
+sidebar-width=140
+sort-column='name'
 sort-directories-first=true
+sort-order='ascending'
+type-format='category'
+view-type='list'
+window-size=(1080, 948)
