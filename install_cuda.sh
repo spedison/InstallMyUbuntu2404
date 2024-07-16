@@ -7,3 +7,7 @@ cd $HOME/git_apps
 git clone https://github.com/jcuda/jcuda.git
 cd jcuda
 git checkout version-12.0.0-RC02
+mvn clean
+mvn compile
+mvn package
+mvn install
