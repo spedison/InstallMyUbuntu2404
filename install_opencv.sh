@@ -1,10 +1,16 @@
 # Pacotes necessários
-sudo apt install ffmpeg libffmpeg-nvenc-dev
+sudo apt install -y ffmpeg libffmpeg-nvenc-dev
+
+sudo apt install -y libtesseract-dev libtesseract5 tesseract-ocr-por tesseract-ocr-enm libgtk3-nocsd0 libgtk3.0-cil libgtk3.0-cil-dev libgtk-3-dev libgtkglext1  libgtkglext1-dev libgstreamerd-3-0  libgstreamerd-3-dev 
+
+# Não consegui ainda configurar o Blas decentemente.
+sudo apt install -y libblas-dev liblapack-dev gfortran
 
 mkdir -p /home/spedison/lib/java/opencv
 
 #Mudar o link simbólico do gcc-13 para o gcc-12 (podemos voltar depois da compilação se necessário)
 sudo rm /usr/bin/gcc; ln -s /usr/bin/gcc-12 /usr/bin/gcc
+sudo rm /usr/bin/g++; ln -s /usr/bin/g++-12 /usr/bin/g++
 
 # Baixar os fontes do repositório
 
@@ -14,22 +20,24 @@ sudo rm /usr/bin/gcc; ln -s /usr/bin/gcc-12 /usr/bin/gcc
 ## GTX/RTX Turing – GTX 1660 Ti, RTX 2060, RTX 2070, RTX 2080, Titan RTX, Quadro RTX 4000, Quadro RTX 5000, Quadro RTX 6000, Quadro RTX 8000, Quadro T1000/T2000, Tesla T4
 ## Ref: https://arnon.dk/matching-sm-architectures-arch-and-gencode-for-various-nvidia-cards/
 # Preparar a compilação com CMake
-cmake        -D CMAKE_BUILD_TYPE=RELEASE \
+cmake        -D SHELL="/bin/bash -x" \
+             -D CMAKE_BUILD_TYPE=RELEASE \
+             -D ENABLE_GNU_STL_DEBUG=OFF \
              -D OPENCV_GENERATE_PKGCONFIG=ON \
+             -D BUILD_ZLIB=ON \
              -D WITH_TIFF=ON \
              -D BUILD_JPEG=ON \
              -D BUILD_PNG=ON \
              -D BUILD_WEBP=ON \
-             -D BUILD_SHARED_LIBS=ON \
+             -D BUILD_SHARED_LIBS=OFF \
              -D ENABLE_FAST_MATH=1 \
              -D INSTALL_PYTHON_EXAMPLES=ON \
              -D INSTALL_JAVA_EXAMPLES=ON \
              -D INSTALL_C_EXAMPLES=ON \
              -D BUILD_EXAMPLES=ON \
-             -D OPENCV_GENERATE_PKGCONFIG=ON \
              -D WITH_GTK=true \
              -D WITH_TBB=ON \
-             -D WITH_OPENMP=ON  \
+             -D WITH_OPENMP=OFF  \
              -D WITH_EIGEN=ON \
              -D WITH_IPP=ON \
              -D OPENCV_ENABLE_NONFREE=ON \
@@ -49,8 +57,8 @@ cmake        -D CMAKE_BUILD_TYPE=RELEASE \
              -D BUILD_TESTS=OFF  \
              -D OPENCV_GENERATE_PKGCONFIG=ON \
              -D OPENCV_PC_FILE_NAME=opencv.pc \
-             -D FFMPEG_LIBDIR="/usr/bin" \
-             -D FFMPEG_INCLUDE_DIRS="/usr/bin" \
+             -D FFMPEG_LIBDIR="/usr/lib/x86_64-linux-gnu" \
+             -D FFMPEG_INCLUDE_DIRS="/usr/include/" \
              -D CMAKE_INSTALL_PREFIX="/home/spedison/lib/java/opencv"  \
              -D OPENCV_EXTRA_MODULES_PATH="../opencv_contrib/modules" \
              -D WITH_INF_ENGINE=ON \
@@ -70,6 +78,16 @@ cmake        -D CMAKE_BUILD_TYPE=RELEASE \
              -D BUILD_opencv_java_bindings_generator=ON \
              -D OPENCV_JAVA_SOURCE_VERSION=21 \
              -D OPENCV_JAVA_TARGET_VERSION=21 \
+             -D JAVA_INCLUDE_PATH2="/home/spedison/.sdkman/candidates/java/current/include/linux" \
+             -D BUILD_FAT_JAVA_LIB=ON \
+             -D CMAKE_C_COMPILER=/usr/bin/gcc \
+             -D CMAKE_CXX_COMPILER=/usr/bin/g++ \
+             -D CMAKE_CPP_COMPILER=/usr/bin/cpp \
+             -D CMAKE_CXX_STANDARD=14 \
+             -D ENABLE_CXX11=OFF \
+             -D Tesseract_DIR="/usr/share/tesseract-ocr/5" \
+             -D WITH_TESSERACT=ON \
+             -D BUILD_opencv_viz=ON \
              ../opencv
              
 make -j 10             
