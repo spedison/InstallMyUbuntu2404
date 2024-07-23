@@ -1,10 +1,11 @@
 # Pacotes necessários
 sudo apt install -y ffmpeg libffmpeg-nvenc-dev
 
-sudo apt install -y libtesseract-dev libtesseract5 tesseract-ocr-por tesseract-ocr-enm libgtk3-nocsd0 libgtk3.0-cil libgtk3.0-cil-dev libgtk-3-dev libgtkglext1  libgtkglext1-dev libgstreamerd-3-0  libgstreamerd-3-dev 
+sudo apt install -y libtesseract-dev libtesseract5 tesseract-ocr-por tesseract-ocr-enm 
+libgtk3-nocsd0 libgtk3.0-cil libgtk3.0-cil-dev libgtk-3-dev libgtkglext1  libgtkglext1-dev libgstreamerd-3-0  libgstreamerd-3-dev 
 
 # Não consegui ainda configurar o Blas decentemente.
-sudo apt install -y libblas-dev liblapack-dev gfortran
+sudo apt install -y libblas-dev liblapack-dev gfortran libatlas-base-dev
 
 mkdir -p /home/spedison/lib/java/opencv
 
@@ -85,6 +86,8 @@ cmake        -D SHELL="/bin/bash -x" \
              -D CMAKE_CPP_COMPILER=/usr/bin/cpp \
              -D CMAKE_CXX_STANDARD=14 \
              -D ENABLE_CXX11=OFF \
+             -D Tesseract_INCLUDE_DIR="/usr/include/tesseract" \
+             -D Tesseract_LIBRARY="/usr/lib/x86_64-linux-gnu/libtesseract.so.5" \
              -D Tesseract_DIR="/usr/share/tesseract-ocr/5" \
              -D WITH_TESSERACT=ON \
              -D BUILD_opencv_viz=ON \
