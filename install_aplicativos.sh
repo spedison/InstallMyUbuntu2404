@@ -1,5 +1,6 @@
 # Aplicativos mais básicos
-sudo apt install -y mc git curl wget htop btop vim terminator gnuplot octave net-tools binutils make cmake gcc g++ 
+sudo apt install -y mc git curl wget htop btop vim terminator gnuplot octave net-tools 
+sudo apt install -y binutils make cmake gcc g++ g++-12 g++-11 libstdc++5
 sudo apt install -y zip unzip gzip libreoffice tree silversearcher-ag
 
 
@@ -62,6 +63,9 @@ curl -O https://repo.anaconda.com/archive/Anaconda3-$INSTALLER_VERSION-Linux-x86
 # Não tem uma instalação decente.
 # Deve aceiter os termos e pedir para alterar o .bashrc
 bash "$HOME/Anaconda3-$INSTALLER_VERSION-Linux-x86_64.sh"
+
+# Depois de instalar acertar a versão da glibc
+conda install -c conda-forge gcc=12.1.0
 
 #SDKMan
 curl -s "https://get.sdkman.io" | bash
