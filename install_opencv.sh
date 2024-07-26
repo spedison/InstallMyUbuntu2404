@@ -6,6 +6,7 @@ sudo apt install -y libgtk3-nocsd0 libgtk3.0-cil libgtk3.0-cil-dev libgtk-3-dev 
 sudo apt install -y libv4l-dev libgstreamerd-3-0  libgstreamerd-3-dev 
 sudo apt install -y libhdf5-dev libhdf5-serial-dev libpbihdf-dev
 sudo apt install -y libeigen3-dev libcxsparse4 libelpa-dev libelpa19 libgsl27 libgslcblas0 libgsl27 libelpa-dev
+sudo apt install -y libngraph0-dev libngraph0 ngraph-gtk ngraph-gtk-addin-import-ps
 
 # Não consegui ainda configurar o Blass decentemente.
 sudo apt install -y libblas-dev liblapack-dev gfortran libatlas-base-dev liblapacke-dev
