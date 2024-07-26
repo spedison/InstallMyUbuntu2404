@@ -1,5 +1,6 @@
 # Aplicativos mais básicos
-sudo apt install -y mc git curl wget htop btop vim terminator gnuplot octave net-tools binutils make cmake gcc g++ zip unzip gzip libreoffice tree
+sudo apt install -y mc git curl wget htop btop vim terminator gnuplot octave net-tools binutils make cmake gcc g++ 
+sudo apt install -y zip unzip gzip libreoffice tree silversearcher-ag
 
 
 # IDEs da JetBrains
