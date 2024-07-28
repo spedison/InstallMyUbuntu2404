@@ -12,32 +12,39 @@ sudo apt install -y libngraph0-dev libngraph0 ngraph-gtk ngraph-gtk-addin-import
 sudo apt install -y libblas-dev liblapack-dev gfortran 
 sudo apt install -y libatlas-base-dev 
 sudo apt install -y liblapacke-dev 
-                    
+
+# Bibliotecas de processamento paralelo TBB e openMP                    
 sudo apt install -Y libbtbb-dev libtbb-dev
 sudo apt install -y libomp5-18  libomp-dev
 
-#Baixar a versão 4.8.1 do OpenCV.
+# Usando o OpenGl para Java.
+sudo apt install -y libjogl2-java libjogl2-java-doc 
+
+## Instalar o JavaFX para usar as janelas.
+## Outro Script. (MUITO mais simples)
+
+#Baixar a versão 4.10.0 do OpenCV.
 mkdir $HOME/git_apps/opencv/
 cd $HOME/git_apps/opencv/
-git clone 
-git clone
-cd opencv
-git checkout
-cd $HOME/git_apps/opencv/opencv-contrib
-git checkout
+
+# Baixar os fontes do repositório da versão 4.10.0
+git clone https://github.com/opencv/opencv.git
+git clone https://github.com/opencv/opencv_contrib.git
+cd ./opencv 
+git checkout 4.10.0
+cd ../opencv_contrib
+git checkout 4.10.0
 
 #Criar o direorio de build
 mkdir $HOME/git_apps/opencv/build
 cd $HOME/git_apps/opencv/build
 
-# Diretório de destino
+# Diretório de destino para colocar o resultado da compilação
 mkdir -p /home/spedison/lib/java/opencv
 
 #Mudar o link simbólico do gcc-13 para o gcc-12 (podemos voltar depois da compilação se necessário)
 sudo rm /usr/bin/gcc; ln -s /usr/bin/gcc-12 /usr/bin/gcc
 sudo rm /usr/bin/g++; ln -s /usr/bin/g++-12 /usr/bin/g++
-
-# Baixar os fontes do repositório
 
 # Ajustar a versão que vc deseja
 # sm_75 -> RTX 2070,4060...
@@ -54,15 +61,17 @@ cmake        -D SHELL="/bin/bash -x" \
              -D BUILD_JPEG=ON \
              -D BUILD_PNG=ON \
              -D BUILD_WEBP=ON \
-	           -D WITH_OPENCL=ON \
-             -D BUILD_SHARED_LIBS=OFF \
+	     -D WITH_OPENCL=ON \
+             -D BUILD_SHARED_LIBS=ON \
              -D ENABLE_FAST_MATH=1 \
+	     -D WITH_INF_ENGINE=ON \
+             -D WITH_NGRAPH=ON \
              -D INSTALL_PYTHON_EXAMPLES=OFF \
+             -D BUILD_opencv_python=ON \
              -D INSTALL_JAVA_EXAMPLES=OFF \
              -D INSTALL_C_EXAMPLES=OFF \
              -D BUILD_EXAMPLES=OFF \
-             -D WITH_GTK=false \
-	           -D OPENCV_DNN_OPENCL=OFF \
+             -D WITH_GTK=OFF \
              -D WITH_TBB=ON \
              -D WITH_OPENMP=OFF  \
              -D WITH_EIGEN=ON \
@@ -72,11 +81,10 @@ cmake        -D SHELL="/bin/bash -x" \
              -D WITH_V4L=ON \
              -D WITH_QT=OFF \
              -D BUILD_opencv_java=ON \
-             -D BUILD_opencv_python=ON \
+             -D BUILD_opencv_python=ON\
              -D WITH_CSTRIPES=ON \
              -D BUILD_opencv_viz=ON \
-             -D WITH_FFMPEG=ON \
-             -D WITH_OPENGL=ON \
+             -D WITH_OPENGL=OFF \
              -D WITH_VA_INTEL=OFF \
              -D WITH_GSTREAMER=ON \
              -D BUILD_DOCS=OFF  \
@@ -84,6 +92,7 @@ cmake        -D SHELL="/bin/bash -x" \
              -D BUILD_TESTS=OFF  \
              -D OPENCV_GENERATE_PKGCONFIG=ON \
              -D OPENCV_PC_FILE_NAME=opencv.pc \
+             -D WITH_FFMPEG=ON \
              -D FFMPEG_LIBDIR="/usr/lib/x86_64-linux-gnu" \
              -D FFMPEG_INCLUDE_DIRS="/usr/include/" \
              -D CMAKE_INSTALL_PREFIX="/home/spedison/lib/java/opencv"  \
@@ -93,24 +102,26 @@ cmake        -D SHELL="/bin/bash -x" \
              -D WITH_CUBLAS=1 \
              -D WITH_CUDA=ON \
              -D BUILD_opencv_cudacodec=ON \
+	     -D OPENCV_DNN_OPENCL=ON \
              -D WITH_CUDNN=ON \
-             -D OPENCV_DNN_CUDA=OFF \
-	           -D CUDA_ARCH_PTX=75 \
+             -D OPENCV_DNN_CUDA=ON \
+	     -D CUDA_ARCH_PTX=75 \
              -D CUDA_ARCH_BIN=7.5 \
              -D ARCH=sm_75 \
              -D gencode=arch=compute_75,code=sm_75 \
              -D WITH_CUFFT=ON  \
-             -D WITH_NVCUVID=ON  \
+             -D WITH_NVCUVID=OFF  \
+	     -D WITH_NVCUVENC=OFF \
              -D BUILD_JAVA=ON \
              -D BUILD_opencv_java=ON \
              -D BUILD_opencv_java_bindings_generator=ON \
              -D OPENCV_JAVA_SOURCE_VERSION=21 \
              -D OPENCV_JAVA_TARGET_VERSION=21 \
              -D JAVA_INCLUDE_PATH2="/home/spedison/.sdkman/candidates/java/current/include/linux" \
-             -D BUILD_FAT_JAVA_LIB=ON \
-             -D CMAKE_C_COMPILER=/usr/bin/gcc \
-             -D CMAKE_CXX_COMPILER=/usr/bin/g++ \
-             -D CMAKE_CPP_COMPILER=/usr/bin/cpp \
+             -D BUILD_FAT_JAVA_LIB=OFF \
+             -D CMAKE_C_COMPILER=/usr/bin/gcc-12 \
+             -D CMAKE_CXX_COMPILER=/usr/bin/g++-12 \
+             -D CMAKE_CPP_COMPILER=/usr/bin/cpp-12 \
              -D CMAKE_CXX_STANDARD=14 \
              -D ENABLE_CXX11=OFF \
              -D Tesseract_INCLUDE_DIR="/usr/include/tesseract" \
