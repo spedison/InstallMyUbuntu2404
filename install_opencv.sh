@@ -9,7 +9,12 @@ sudo apt install -y libeigen3-dev libcxsparse4 libelpa-dev libelpa19 libgsl27 li
 sudo apt install -y libngraph0-dev libngraph0 ngraph-gtk ngraph-gtk-addin-import-ps
 
 # Não consegui ainda configurar o Blass decentemente.
-sudo apt install -y libblas-dev liblapack-dev gfortran libatlas-base-dev liblapacke-dev
+sudo apt install -y libblas-dev liblapack-dev gfortran 
+sudo apt install -y libatlas-base-dev 
+sudo apt install -y liblapacke-dev 
+                    
+sudo apt install -Y libbtbb-dev libtbb-dev
+sudo apt install -y libomp5-18  libomp-dev
 
 #Baixar a versão 4.8.1 do OpenCV.
 mkdir $HOME/git_apps/opencv/
