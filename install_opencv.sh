@@ -133,3 +133,15 @@ cmake        -D SHELL="/bin/bash -x" \
 make clean 
 
 make -j 50
+
+make install
+
+## Adicionado esse path, no UBUNTU com JDK 21 Da GrallVM CE pois, esse caminho é usado como padrão. 
+## Além disso eu achei muito sugestivo e fora das outras LIBS do SOM.
+## Isso facilita o desenvolvimento e não pertuba os outros programas.
+sudo mkdir -p /usr/java/packages/lib
+sudo ln -s $HOME/lib/java/opencv/share/java/opencv4/opencv-4100.jar  /usr/java/packages/lib/opencv-4100.jar 
+sudo ln -s $HOME/lib/java/opencv/share/java/opencv4/libopencv_java4100.so  /usr/java/packages/lib/libopencv_java4100.so
+
+## As outroas bibliotecas vou trazendo conforme for utilizando.
+
