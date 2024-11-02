@@ -47,6 +47,16 @@ ln -s ~/.local/share/pycharm-2024.1.4 ~/.local/share/pycharm
 echo 'export PATH=$PATH:/home/spedison/.local/share/pycharm/bin' >> ~/.bashrc
 rm ~/pycharm-professional-2024.1.4.tar
 
+#RustRover
+cd ~
+wget https://download-cdn.jetbrains.com/rustrover/RustRover-2024.2.4.tar.gz
+gunzip RustRover-2024.2.4.tar.gz
+cd ~/.local/share
+tar -xvf ~/RustRover-2024.2.4.tar
+ln -s ~/.local/share/RustRover-2024.2.4 ~/.local/share/rustrover
+echo 'export PATH=$PATH:/home/spedison/.local/share/rustrover/bin' >> ~/.bashrc
+rm ~/RustRover-2024.2.4.tar
+
 
 #Anaconda
 cd ~
