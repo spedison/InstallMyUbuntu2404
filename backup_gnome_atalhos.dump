@@ -27,5 +27,5 @@ name='CLion'
 
 [custom-keybindings/custom4]
 binding='<Super>r'
-command='/home/spedison/.local/share/rustrover/bin/rustrover.sh'
+command='/home/spedison/.local/share/rustrover/bin/rustrover'
 name='Rust'
