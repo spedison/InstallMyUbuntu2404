@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=GoLand
+Icon=/home/spedison/.local/share/GoLand-2024.1.4/bin/goland.svg
+Exec="/home/spedison/.local/share/GoLand-2024.1.4/bin/goland.sh" %f
+Comment=A cross-platform Go IDE with extended support for JavaScript, TypeScript, and databases
+Categories=Development;IDE;
+Terminal=false
+StartupWMClass=jetbrains-goland
+StartupNotify=true
+#OnlyShowIn=Old;

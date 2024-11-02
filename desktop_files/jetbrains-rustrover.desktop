@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=RustRover Professional Edition
+Icon=/home/spedison/.local/share/rustrover/bin/rustrover.svg
+Exec="/home/spedison/.local/share/rustrover/bin/rustrover" %f
+Comment=Rust IDE for Professional Developers
+Categories=Development;IDE;
+Terminal=false
+StartupWMClass=jetbrains-rustrover
+StartupNotify=true
