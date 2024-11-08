@@ -1,8 +1,5 @@
 mkdir $HOME/git_apps
 
-# ImageMagick
-sudo apt install -y  imagemagick
-
 # SCRCPY
 cd $HOME/git_apps
 git clone https://github.com/Genymobile/scrcpy.git
