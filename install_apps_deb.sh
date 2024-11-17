@@ -1,4 +1,7 @@
-
+#Aplicativo para mover janelas. Exemplo
+# wmctrl -r 'Nome_da_Janela' -e 0,0,0,-1,-1
+# wmctrl -l
+sudo apt-get install -y wmctrl
 # ImageMagick
 sudo apt install -y  imagemagick
 
