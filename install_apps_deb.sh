@@ -1,3 +1,7 @@
+# Mapear a rede com serviços e IPs
+# Exemplo : sudo nmap -sS 192.xx.xx.0/24
+sudo apt install nmap
+
 #App para comparação de diretórios e arquivos.
 sudo apt-get install -y meld
 
