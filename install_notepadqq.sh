@@ -34,3 +34,19 @@ make install
 # Não precisei ajustar nada de mais grave no ambiente. 
 # Fiquei preocupado com os novos repositórios, mas pelo que vi não precisei fazer nada que quebrasse o sistema.
 # Mas, o que vi que existe outras opções (mas não iguais ao notepadqq) como : Kate, geany ou mais parrudas com vscode.
+
+# Script para remover.
+# #!/bin/bash
+# echo "Removendo Notepadqq..."
+# sudo rm -rf /usr/local/bin/notepadqq
+# sudo rm -rf /usr/local/lib/notepadqq
+# sudo rm -rf /usr/local/share/applications/notepadqq.desktop
+# sudo rm -rf /usr/local/share/icons/hicolor/*/apps/notepadqq.png
+# sudo rm -rf /usr/local/share/metainfo/notepadqq.appdata.xml
+# rm -rf ~/.config/notepadqq ~/.cache/notepadqq ~/.local/share/notepadqq
+# update-desktop-database ~/.local/share/applications
+# gtk-update-icon-cache -f /usr/share/icons/hicolor
+# echo "Notepadqq removido com sucesso!"
+
+
+
