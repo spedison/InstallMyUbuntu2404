@@ -29,7 +29,7 @@ cd notepadqq
 # Compilando e conversando com o ChatGPT.
 make clean
 make -j$(nproc)
-make install
+sudo make install
 
 # Não precisei ajustar nada de mais grave no ambiente. 
 # Fiquei preocupado com os novos repositórios, mas pelo que vi não precisei fazer nada que quebrasse o sistema.
