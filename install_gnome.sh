@@ -17,5 +17,5 @@ gsettings set org.gnome.mutter dynamic-workspaces false
 gsettings set org.gnome.desktop.wm.preferences num-workspaces 7
 
 dconf load /org/gnome/desktop/wm/preferences/ < desktop-config.dump
-dconf load /org/gnome/mutter/ < mutter-config.dump
+
 
