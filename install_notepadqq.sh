@@ -17,8 +17,8 @@ export PATH=/usr/lib/qt5/bin:$PATH
 export QT_SELECT=qt5
 qmake -v
 
-# Baixar os fontes do NotepadQQ
-git clone https://github.com/notepadqq/notepadqq.git
+# Baixar os fontes do NotepadQQ (Fork do spedison)
+git clone https://github.com/spedison/notepadqq.git
 cd notepadqq
 ./configure --qmake /usr/lib/qt5/bin/qmake
 
