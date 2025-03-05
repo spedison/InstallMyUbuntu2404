@@ -1,0 +1,6 @@
+[mutter]
+center-new-windows=true
+edge-tiling=true
+
+[desktop/interface]
+enable-hot-corners=true

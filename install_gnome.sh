@@ -17,9 +17,11 @@ gsettings set org.gnome.mutter dynamic-workspaces false
 gsettings set org.gnome.desktop.wm.preferences num-workspaces 7
 
 cp ./img/2024-08-30-07-42-52-20240331_155447.jpg /home/spedison/.local/share/backgrounds/.
-
 dconf load /org/gnome/desktop/wm/preferences/ < desktop-config.dump
+gsettings set org.gnome.desktop.background picture-uri 'file:///home/spedison/.local/share/backgrounds/2024-08-30-07-42-52-20240331_155447.jpg'
 
+#Ajuste do Dock.
 dconf load /org/gnome/shell/extensions/dash-to-dock/ < dash-to-dock.dump
 
-gsettings set org.gnome.desktop.background picture-uri 'file:///home/spedison/.local/share/backgrounds/2024-08-30-07-42-52-20240331_155447.jpg'
+
+dconf load /org/gnome/ < ./corners-bordes.dump
