@@ -9,6 +9,8 @@ sudo add-apt-repository universe
 sudo add-apt-repository multiverse
 sudo apt update
 sudo apt install -y qtbase5-dev qtchooser qttools5-dev qttools5-dev-tools     libqt5webkit5-dev libqt5svg5-dev libqt5websockets5-dev libqt5webchannel5-dev     qtwebengine5-dev libqt5webenginecore5 libqt5webenginewidgets5
+sudo apt install -y libuchardet-dev uchardet
+
 qmake -v
 conda deactivate 
 hash -r
@@ -47,6 +49,3 @@ sudo make install
 # update-desktop-database ~/.local/share/applications
 # gtk-update-icon-cache -f /usr/share/icons/hicolor
 # echo "Notepadqq removido com sucesso!"
-
-
-
