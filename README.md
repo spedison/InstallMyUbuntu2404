@@ -17,3 +17,6 @@ mas consegui sistematizar o que precisa ser feito para disponibilizar uma máqui
  11) install_cuda.sh         (Instala o cuda para processamento de imagem/video)
  12) install_docker_com_nvidia_container_toolkit.sh (Capacidade de rodar Cuda em containers docker)
  13) install_opencv.sh       (Compila e Instala do OpenCV para processamento de imagens, em c++ e java)
+
+
+## TODO: Complementar e ajustar a ordem. O instala_gnome está chamando outros scripts.
