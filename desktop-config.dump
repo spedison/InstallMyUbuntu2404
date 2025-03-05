@@ -56,10 +56,6 @@ old-files-age=uint32 30
 recent-files-max-age=-1
 
 [remote-desktop/rdp]
-enable=false
-tls-cert='/home/spedison/.local/share/gnome-remote-desktop/certificates/rdp-tls.crt'
-tls-key='/home/spedison/.local/share/gnome-remote-desktop/certificates/rdp-tls.key'
-view-only=true
 
 [screensaver]
 color-shading-type='solid'

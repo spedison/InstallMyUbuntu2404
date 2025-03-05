@@ -20,4 +20,4 @@ cp ./img/2024-08-30-07-42-52-20240331_155447.jpg /home/spedison/.local/share/bac
 
 dconf load /org/gnome/desktop/wm/preferences/ < desktop-config.dump
 
-
+dconf load /org/gnome/shell/extensions/dash-to-dock/ < dash-to-dock.dump
