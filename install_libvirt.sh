@@ -1,5 +1,5 @@
 sudo apt update
-sudo apt install -y qemu-kvm libvirt-daemon-system
+sudo apt install -y qemu-kvm libvirt-daemon-system libvirt
 sudo adduser $USER libvirt
 # Adm de VMs
 sudo apt install -y virt-manager
