@@ -1,6 +1,6 @@
 # Mapear a rede com serviços e IPs
 # Exemplo : sudo nmap -sS 192.xx.xx.0/24
-sudo apt install nmap
+sudo apt install -y nmap
 
 #App para comparação de diretórios e arquivos.
 sudo apt-get install -y meld
@@ -23,3 +23,6 @@ sudo apt install -y dwebp
 
 # Usando o ssh
 sudo apt install -y openssh-client openssh-server
+
+# Para que possa configurar o AppArMor.
+sudo apt install -y apparmor-utils
