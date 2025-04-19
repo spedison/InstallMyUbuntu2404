@@ -26,3 +26,6 @@ sudo apt install -y openssh-client openssh-server
 
 # Para que possa configurar o AppArMor.
 sudo apt install -y apparmor-utils
+
+# Para imprimir grafos.
+sudo apt install graphviz
