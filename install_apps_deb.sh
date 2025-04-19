@@ -2,19 +2,23 @@
 # Exemplo : sudo nmap -sS 192.xx.xx.0/24
 sudo apt install -y nmap
 
-#App para comparação de diretórios e arquivos.
+#App para comparação de diretórios e arquivos em uma interface gráfica amigável.
 sudo apt-get install -y meld
 
 # https://github.com/jordansissel/xdotool/
 # Automação de Janela, Telcado e Mouse.
 sudo apt-get install -y xdotool
 
-#Aplicativo para mover janelas. Exemplo
+#Aplicativo para mover janelas. 
+# https://github.com/Conservatory/wmctrl
+# 
+# Exemplo
 # wmctrl -r 'Nome_da_Janela' -e 0,0,0,-1,-1
 # wmctrl -l
 sudo apt-get install -y wmctrl
 
 # ImageMagick
+# https://imagemagick.org
 sudo apt install -y  imagemagick
 
 ## App que converte webp em jpg
@@ -28,4 +32,5 @@ sudo apt install -y openssh-client openssh-server
 sudo apt install -y apparmor-utils
 
 # Para imprimir grafos.
-sudo apt install graphviz
+# https://graphviz.org/download/
+sudo apt install -y graphviz
