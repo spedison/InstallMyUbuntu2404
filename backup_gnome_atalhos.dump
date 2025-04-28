@@ -29,3 +29,20 @@ name='CLion'
 binding='<Super>r'
 command='/home/spedison/.local/share/rustrover/bin/rustrover'
 name='Rust'
+
+[custom-keybindings/custom5]
+binding='<Super><Shift>c'
+command='/home/spedison/scripts/abre-chatgpt.sh'
+name='Chat GPT'
+
+[custom-keybindings/custom6]
+binding='<Super>b'
+command='/snap/bin/vivaldi.vivaldi-stable http://banana.casa.com.br'
+name='Banana Pi'
+
+[custom-keybindings/custom7]
+binding='<Super>v'
+command='/snap/bin/vivaldi.vivaldi-stable'
+name='Vivaldi'
+
+
