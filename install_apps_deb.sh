@@ -1,3 +1,6 @@
+# Outros apps básicos para baixa projetos e editar textos e descompactar arquivos.
+sudo apt install -y git curl wget vim unzip
+
 # Mapear a rede com serviços e IPs
 # Exemplo : sudo nmap -sS 192.xx.xx.0/24
 sudo apt install -y nmap
@@ -39,3 +42,6 @@ sudo apt install -y graphviz
 
 # Suporte para o Mouse Logtech
 sudo apt install -y solaar logiops
+
+# Editor vim modo gráfico
+sudo apt install -y vim-gtk3
