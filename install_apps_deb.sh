@@ -2,14 +2,15 @@
 # Exemplo : sudo nmap -sS 192.xx.xx.0/24
 sudo apt install -y nmap
 
-#App para comparação de diretórios e arquivos em uma interface gráfica amigável.
+# App para comparação de diretórios e arquivos 
+# em uma interface gráfica amigável.
 sudo apt-get install -y meld
 
 # https://github.com/jordansissel/xdotool/
 # Automação de Janela, Telcado e Mouse.
 sudo apt-get install -y xdotool
 
-#Aplicativo para mover janelas. 
+# Aplicativo para listar mover janelas. 
 # https://github.com/Conservatory/wmctrl
 # 
 # Exemplo
@@ -17,12 +18,13 @@ sudo apt-get install -y xdotool
 # wmctrl -l
 sudo apt-get install -y wmctrl
 
-# ImageMagick
+# ImageMagick : Apps para manipulação de imagens 
+# usando linha de comando
 # https://imagemagick.org
 sudo apt install -y  imagemagick
 
-## App que converte webp em jpg
-## Exemplo : dwebp apache-Lucene.webp -o apache-Lucene.png
+# App que converte webp em jpg
+# Exemplo : dwebp apache-Lucene.webp -o apache-Lucene.png
 sudo apt install -y dwebp 
 
 # Usando o ssh
@@ -31,6 +33,9 @@ sudo apt install -y openssh-client openssh-server
 # Para que possa configurar o AppArMor.
 sudo apt install -y apparmor-utils
 
-# Para imprimir grafos.
+# Para converte grafos em imagens (fica muito bom!).
 # https://graphviz.org/download/
 sudo apt install -y graphviz
+
+# Suporte para o Mouse Logtech
+sudo apt install -y solaar logiops
