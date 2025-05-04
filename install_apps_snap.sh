@@ -43,3 +43,6 @@ sudo snap install code
 
 # Navegador Web muito bom e leve.
 sudo snap install vivaldi
+
+# Leitor de eBooks
+sudo snap install  arianna
