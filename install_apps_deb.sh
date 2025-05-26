@@ -47,4 +47,4 @@ sudo apt install -y solaar logiops
 sudo apt install -y vim-gtk3
 
 # Aplicativos para manipulaçãp de arquivo Latex
-sudo apt install -y texlive texlive-latex-base texlive-science texlive-publishers texlive-pictures-doc texlive-latex-extra texlive-lang-portuguese texlive-font-utils texlive-binaries texlive-bibtex-extra texlive-base texlive
+sudo apt install -y texlive texlive-latex-base texlive-science texlive-publishers texlive-pictures-doc texlive-latex-extra texlive-lang-portuguese texlive-font-utils texlive-binaries texlive-bibtex-extra texlive-base tth tpp tgif texworks texmaker texmaker-data sent
