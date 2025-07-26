@@ -12,3 +12,4 @@ chmod u+x gradlew
 ./gradlew publishToMavenLocal
 ./gradlew createLibraryDirectory
 ./gradlew oneJar
+ln -s $PWD/ejml-v0.44.0.jar $PWD/ejml.jar
