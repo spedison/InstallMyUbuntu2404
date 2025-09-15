@@ -4,8 +4,8 @@
 
 sudo apt update
 
-# Instalação do Curl, se necessário
-sudo apt install -y curl  
+# Instalação do Curl e demais ferramentas se necessário
+sudo apt install -y build-essential curl git pkg-config libssl-dev
 
 # Usa o cur para executar um script remoto para instalação do CURL multiplataforma.
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
