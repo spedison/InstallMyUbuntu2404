@@ -46,3 +46,6 @@ sudo snap install vivaldi
 
 # Leitor de eBooks
 sudo snap install  arianna
+
+# Editor de imagens bem razoável para um amador de ediçãO de imagens.
+sudo snap install krita
