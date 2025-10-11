@@ -7,6 +7,9 @@ sudo apt update
 # Instalação do Curl e demais ferramentas se necessário
 sudo apt install -y build-essential curl git pkg-config libssl-dev
 
+# Backend de compilacao para gerar binding de acesso a libs externas, como o OpenCV.
+sudo apt install -y llvm-dev libclang-dev clang pkg-config
+
 # Usa o cur para executar um script remoto para instalação do CURL multiplataforma.
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
