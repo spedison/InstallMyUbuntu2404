@@ -49,3 +49,6 @@ sudo snap install  arianna
 
 # Editor de imagens bem razoável para um amador de ediçãO de imagens.
 sudo snap install krita
+
+# Editor que pode-se usar o mouse ou mesa para desenhar e/ou apresentar conteúdo com Imagens/Textos e Desenhos a mao
+sudo snap install xournalpp
